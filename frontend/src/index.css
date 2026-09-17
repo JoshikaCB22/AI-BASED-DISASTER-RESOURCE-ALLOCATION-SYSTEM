@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body { @apply bg-slate-950 text-slate-100 font-sans; }
+  * { box-sizing: border-box; }
+  ::-webkit-scrollbar { width: 5px; height: 5px; }
+  ::-webkit-scrollbar-track { @apply bg-slate-900; }
+  ::-webkit-scrollbar-thumb { @apply bg-slate-600 rounded-full; }
+}
+
+@layer components {
+  /* Cards */
+  .card { @apply bg-slate-900 border border-slate-800 rounded-xl p-5; }
+
+  /* Buttons */
+  .btn         { @apply inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all disabled:opacity-50 disabled:cursor-not-allowed; }
+  .btn-primary { @apply btn bg-blue-600 hover:bg-blue-700 text-white; }
+  .btn-red     { @apply btn bg-red-600 hover:bg-red-700 text-white; }
+  .btn-green   { @apply btn bg-green-600 hover:bg-green-700 text-white; }
+  .btn-ghost   { @apply btn border border-slate-700 text-slate-300 hover:bg-slate-800; }
+  .btn-yellow  { @apply btn bg-yellow-600 hover:bg-yellow-700 text-white; }
+
+  /* Inputs */
+  .input  { @apply w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-sm text-slate-100 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500; }
+  .label  { @apply block text-xs text-slate-400 font-medium mb-1; }
+  .select { @apply input appearance-none cursor-pointer; }
+
+  /* Table */
+  .tbl          { @apply w-full text-sm; }
+  .tbl thead tr { @apply bg-slate-800 text-slate-400 text-xs uppercase; }
+  .tbl thead th { @apply px-4 py-3 font-medium text-left; }
+  .tbl tbody tr { @apply border-t border-slate-800 hover:bg-slate-800/50 transition-colors; }
+  .tbl tbody td { @apply px-4 py-3 text-slate-300; }
+
+  /* Badges */
+  .badge          { @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium; }
+  .badge-red      { @apply badge bg-red-900/50 text-red-300 border border-red-800; }
+  .badge-orange   { @apply badge bg-orange-900/50 text-orange-300 border border-orange-800; }
+  .badge-yellow   { @apply badge bg-yellow-900/50 text-yellow-300 border border-yellow-800; }
+  .badge-green    { @apply badge bg-green-900/50 text-green-300 border border-green-800; }
+  .badge-blue     { @apply badge bg-blue-900/50 text-blue-300 border border-blue-800; }
+  .badge-slate    { @apply badge bg-slate-700 text-slate-300; }
+
+  /* Page layout */
+  .page-title    { @apply text-2xl font-bold text-white; }
+  .page-sub      { @apply text-sm text-slate-500 mt-0.5; }
+  .section-title { @apply text-base font-semibold text-white; }
+}
+
+/* Leaflet dark */
+.leaflet-container { background: #0f172a !important; }
+.leaflet-popup-content-wrapper {
+  background: #1e293b !important;
+  color: #e2e8f0 !important;
+  border: 1px solid #334155 !important;
+  border-radius: 10px !important;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5) !important;
+}
+.leaflet-popup-tip { background: #1e293b !important; }
+.leaflet-control-zoom a { background: #1e293b !important; color: #94a3b8 !important; border-color: #334155 !important; }
